@@ -3,6 +3,8 @@ package com.ballis.nationqualcoassessment.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Entity
 @Table(name = "country_stats")
 @Data
@@ -18,9 +20,9 @@ public class CountryStats {
     private Integer year;
 
     @Column(name = "population")
-    private Integer population;
+    private BigDecimal population;
 
     @Column(name = "gdp")
-    private Integer gdp;
+    private BigDecimal gdp;
 
 }

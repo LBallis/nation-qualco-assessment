@@ -5,6 +5,8 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.sql.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "countries")
@@ -35,5 +37,13 @@ public class Countries {
 
     @Column(name = "region_id")
     private int regionId;
+
+//    @OneToMany(cascade = CascadeType.ALL)
+//    @JoinTable(
+//            name = "country_languages",
+//            joinColumns = @JoinColumn(name = "country_id"),
+//            inverseJoinColumns = @JoinColumn(name = "language_id")
+//    )
+//    private List<Languages> languages = new ArrayList<>();
 
 }
